@@ -1,0 +1,22 @@
+{% extends 'base.html' %}\
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to OneStep home</h1>
+
+{% if user.is_authenticated %} 
+<p>You're logged in as {{ user.username }} and you're {{ user.age}} years old. </p>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'logout' %}">Logout</a>
+</li>
+{% else %}
+<li class="nav-item">
+<a class="nav-link" href="{% url 'login' %}">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'signup' %}">SignUp</a>
+</li>
+<p> You're not logged in yet. </p>
+{% endif %}
+{% endblock %}  
