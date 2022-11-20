@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
+    'playground.apps.PlaygroundConfig',
+    'examples.apps.ExamplesConfig',
 ]
 AUTH_USER_MODEL= "account.CustomUser"
 
